@@ -5,7 +5,7 @@ set -o pipefail
 set -x
 
 echo "Deployment start"
-git pull
+git pull origin master
 echo "git pull success"
 npm install
 echo "依赖成功"
@@ -21,6 +21,6 @@ echo "into C:/Users/Administrator/Desktop/invoice/jenkins-web-build"
 git add .
 git commit -m '新打包文件'
 
-git push
+git push origin master
 
 echo "Deployment end"
