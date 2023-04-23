@@ -18,19 +18,19 @@ npm run build
 # cd C:/Users/Administrator/Desktop/invoice/jenkins-web-build
 # echo "into C:/Users/Administrator/Desktop/invoice/jenkins-web-build"
 
-# cd ../
-# rm -rf jenkins-web-build
-# git clone git@github.com:Xzwen/jenkins-web-build.git
-# cp -r frontend-build/dist/* jenkins-web-build
-# cd jenkins-web-build
+cd ../
+rm -rf jenkins-web-build
+git clone git@github.com:Xzwen/jenkins-web-build.git
+cp -r frontend-build/dist/* jenkins-web-build
+cd jenkins-web-build
 
 # git remote remove origin
 # git remote add build git@github.com:Xzwen/jenkins-web-build.git
-# git add .
-# git commit -m '新打包文件'
-git add dist/
-
+git add .
 git commit -m '新打包文件'
+# git add dist/
+
+# git commit -m '新打包文件'
 
 git push build master
 
