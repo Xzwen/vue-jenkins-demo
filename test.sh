@@ -27,6 +27,6 @@ cd jenkins-web-build
 git add .
 git commit -m '新打包文件'
 
-git push origin master
+git push build master
 
 echo "Deployment end"
