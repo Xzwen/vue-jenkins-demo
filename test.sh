@@ -31,7 +31,7 @@ git commit -m '新打包文件'
 # git add dist/
 
 # git commit -m '新打包文件'
-
-git push -u origin master
+currentbranch=$(git branch --show-current)
+git push -u origin $currentbranch
 
 echo "Deployment end"
