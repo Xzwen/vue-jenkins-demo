@@ -4,19 +4,24 @@ set -e
 set -o pipefail
 set -x
 
-echo "Deployment start"
-git pull origin master
-echo "git pull success"
-npm install
-echo "依赖成功"
-echo "请输入打包环境"
-npm run build
+# echo "Deployment start"
+# git pull origin master
+# echo "git pull success"
+# npm install
+# echo "依赖成功"
+# echo "请输入打包环境"
+# npm run build
 
-cp -r dist/* C:/Users/Administrator/Desktop/invoice/jenkins-web-build
-echo "copy success"
+# cp -r dist/* C:/Users/Administrator/Desktop/invoice/jenkins-web-build
+# echo "copy success"
 
-cd C:/Users/Administrator/Desktop/invoice/jenkins-web-build
-echo "into C:/Users/Administrator/Desktop/invoice/jenkins-web-build"
+# cd C:/Users/Administrator/Desktop/invoice/jenkins-web-build
+# echo "into C:/Users/Administrator/Desktop/invoice/jenkins-web-build"
+
+cd ../
+git clone git@github.com:Xzwen/jenkins-web-build.git
+cp -r frontend-build/dist/* jenkins-web-build
+cd jenkins-web-build
 
 git add .
 git commit -m '新打包文件'
