@@ -32,6 +32,6 @@ git commit -m '新打包文件'
 
 # git commit -m '新打包文件'
 
-git push origin master
+git push -u origin master
 
 echo "Deployment end"
