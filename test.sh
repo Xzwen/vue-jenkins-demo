@@ -19,6 +19,7 @@ npm run build
 # echo "into C:/Users/Administrator/Desktop/invoice/jenkins-web-build"
 
 cd ../
+rm -rf jenkins-web-build
 git clone git@github.com:Xzwen/jenkins-web-build.git
 cp -r frontend-build/dist/* jenkins-web-build
 cd jenkins-web-build
