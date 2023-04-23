@@ -24,6 +24,8 @@ git clone git@github.com:Xzwen/jenkins-web-build.git
 cp -r frontend-build/dist/* jenkins-web-build
 cd jenkins-web-build
 
+git remtoe remove origin
+git remote add build git@github.com:Xzwen/jenkins-web-build.git
 git add .
 git commit -m '新打包文件'
 
