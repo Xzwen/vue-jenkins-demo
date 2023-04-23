@@ -4,6 +4,8 @@ set -e
 set -o pipefail
 set -x
 
+git checkout master
+
 echo "Deployment start"
 git pull origin master
 echo "git pull success"
@@ -27,11 +29,10 @@ npm run build
 # git remote remove origin
 # git remote add build git@github.com:Xzwen/jenkins-web-build.git
 git add .
-git commit -m '新打包文件'
+git commit -m '新打包文件1'
 # git add dist/
 
 # git commit -m '新打包文件'
-currentbranch=$(git branch --show-current)
-git push -u origin $currentbranch
+git push -u origin master
 
 echo "Deployment end"
